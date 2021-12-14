@@ -23,20 +23,20 @@ class Acciones:
     def login(self):
         print("\nBien!! Identificate en el sitema")
        
-        try:
-            email = input('Introduce tu email: ')
-            password = input('Introduce tu contraseña: ')
-            
-            usuario = modelo.Usuario("","", email, password)
-            login = usuario.indentificar()
-            
-            if email == login[3]:
-                print(f"\nBienvenido {login[1]}, te has registrado en el sistema el {login[5]}")
-                self.proximasAcciones(login)
-        except Exception as e:
+   #     try:
+        email = input('Introduce tu email: ')
+        password = input('Introduce tu contraseña: ')
+        
+        usuario = modelo.Usuario("","", email, password)
+        login = usuario.indentificar()
+        
+        if email == login[3]:
+            print(f"\nBienvenido {login[1]}, te has registrado en el sistema el {login[5]}")
+            self.proximasAcciones(login)
+       # except Exception as e:
            # print(type(e))
            # print(type(e).__name__)
-            print(f"Login incorrecto!! intentalo mas tarde") 
+           #print(f"Login incorrecto!! intentalo mas tarde") 
             
     def proximasAcciones(self,usuario):
         print("""
@@ -55,11 +55,11 @@ class Acciones:
             self.proximasAcciones(usuario)
             
         elif accion == 'mostrar':
-            print('Vamos a mostrar')
+            hazEl.mostrar(usuario)
             self.proximasAcciones(usuario)
             
         elif accion == 'eliminar':
-            print('Vamos a eliminar')
+            hazEl.borrar(usuario)
             self.proximasAcciones(usuario)
             
         elif accion == 'salir':
