@@ -1,0 +1,26 @@
+{% extends 'layout.html' %}
+
+{% block title %} {{title}} {% endblock %}
+
+{% block content %}
+
+<!-- Esto es un comentario en html-->
+{% comment "Y esto es uno en django" %}
+{% endcomment %}
+
+
+<h1 class="title">{{title}}</h1>
+
+<p>{{mi_variable}}</p
+
+{% if nombre and nombre == 'Luciano Campos Kriegl' %}
+    <p>{{nombre}}</p>
+{% else %}
+    <strong>El nombre no existe o no coincide</strong>
+{% endif %}
+
+<p>Años hasta el 2050:</p>
+
+{% endblock %}
+
+

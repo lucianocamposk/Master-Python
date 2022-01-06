@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {% block title%}
+        {% endblock %}
+        | Luciano Campos Kriegl
+    </title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+
+    <header>
+        <div id='logotipo'>
+            <!-- logo django -->
+            <img id="image" src="{% static 'images/logo.png' %}">
+            <h1>Sitio web con Django </h1>
+        </div>
+    </header>
+   
+    <nav>
+        <ul>
+        <li>
+            <a href="/inicio">Inicio</a>
+        </li>
+        </ul>
+        <ul>
+        <li>
+            <a href="/hola-mundo">Hola mundo</a>
+        </li>
+        </ul>
+        <ul>
+        <li>
+            <a href="/pagina-pruebas">Pagina de pruebas</a>
+        </li>
+        </ul>
+        <ul>
+        <li>
+            <a href="/contacto">Contacto</a>
+        </li>
+        </ul>
+    </nav>
+
+    <div class="barra">
+        <span class="esquina-izquierda"></span>
+        <span class="relleno-barra"></span>
+        <span class="esquina-derecha"></span>
+    </div>
+  <div class="box">  
+    <div id="content">
+        {% block content%}
+        <strong>Contenido del bloque original!!</strong>
+        {% endblock %}
+    </div> 
+    </div> 
+<footer>
+    Master en Python &copy; Luciano Campos Kriegl
+</footer>
+</body>
+</html>
