@@ -11,15 +11,25 @@
 
 <h1 class="title">{{title}}</h1>
 
-<p>{{mi_variable}}</p
+{{mi_variable}}
 
 {% if nombre and nombre == 'Luciano Campos Kriegl' %}
     <p>{{nombre}}</p>
 {% else %}
-    <strong>El nombre no existe o no coincide</strong>
+    <strong>
+    <p>El nombre no existe o no coincide</p>
+    </strong>
 {% endif %}
+<h3> Listado de lenguajes de programación </h3>
+<ul>
+    {% for lenguaje in lenguajes  %}   
+        <li>{{forloop.counter}} {{lenguaje}}</li>
+    {% empty %}
+        <strong>No hay lenguajes que mostrar </strong>
+    {% endfor %}
+</ul>
 
-<p>Años hasta el 2050:</p>
+{% include 'fecha-actual.html' with saludo='Hola Mundo desde plantilla:' %}
 
 {% endblock %}
 

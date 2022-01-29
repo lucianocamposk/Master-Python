@@ -25,22 +25,32 @@
     <nav>
         <ul>
         <li>
-            <a href="/inicio">Inicio</a>
+            <a href="{% url 'inicio' %}">Inicio</a>
         </li>
         </ul>
         <ul>
         <li>
-            <a href="/hola-mundo">Hola mundo</a>
+            <a href="{% url 'articulos' %}">Articulos</a>
         </li>
         </ul>
         <ul>
         <li>
-            <a href="/pagina-pruebas">Pagina de pruebas</a>
+            <a href="{% url 'create' %}">Crear articulo</a>
         </li>
         </ul>
         <ul>
         <li>
-            <a href="/contacto">Contacto</a>
+            <a href="{% url 'hola_mundo' %}">Hola mundo</a>
+        </li>
+        </ul>
+        <ul>
+        <li>
+            <a href="{% url 'pagina' %}">Pagina de pruebas</a>
+        </li>
+        </ul>
+        <ul>
+        <li>
+            <a href="{% url 'contacto'  %}">Contacto</a>
         </li>
         </ul>
     </nav>
@@ -58,7 +68,8 @@
     </div> 
     </div> 
 <footer>
-    Master en Python &copy; Luciano Campos Kriegl
+    Master en Python &copy; Luciano Campos Kriegl - {% now "d/m/Y" %}
+
 </footer>
 </body>
 </html>
