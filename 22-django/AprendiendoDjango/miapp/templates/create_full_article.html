@@ -8,6 +8,13 @@ Formularios en Django
 {% block content %}
 <h1 class="title">Formularios en Django</h1>
 
+{% if form.errors %}
+    <strong class="rojo">
+        Hay errores en el formulario
+    </strong>
+{% endif %}
+
+
 <form action="" method="POST">
 
     {% csrf_token %}
